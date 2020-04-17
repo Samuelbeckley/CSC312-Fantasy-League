@@ -1,10 +1,11 @@
 
 class portfolio{
 
-    constructor(stockName, price, quantity){
+    constructor(stockName, price, quantity, userCash){
         this.stockName =  stockName;
         this.price =  price;
         this.quantity = quantity;
+        this.userCash = userCash;
     }
 
 get stockData(){
@@ -16,33 +17,39 @@ getStockData(){
     return [this.stockName,this.price,this.quantity];
 }
 
-//need helping adding an add method to 
-get add(){
-    return this.addStock();
+
+get buy(stockName, quantity){
+    return this.buyStock();
 }
 
-addStock(){
+buyStock(){
     return this.push();
 }
 
-contains(){
-    return null;
-}
 
-sell(){
+sell(stockName, quantity){
     return this.sellStock();
 }
 sellStock(){
  return null;
 }
 
+balance(userCash){
+    return this.checkUserBalance();
+}
+
+checkUserBalance(){
+return null;
+}
+
+contains(){
+    return null;
+}
 
 }
 
 
 var dummyPortfolio = new portfolio("AMZN",2168,5);
-
-
 
 
 //if the new added stock is already in the portfolio, only increase stocks quantity otherwise add new stock name, price, and quantity 
@@ -79,3 +86,8 @@ function stockPriceTransfer(alphaVantageQuantity){
 //when new stock purchase, add stock name, add stock price, update stock quantity. 
 
 //if stock sold, remove stock name, remove stock price, update stock quantity. 
+
+
+
+
+
