@@ -1,10 +1,9 @@
-class stock{
-    constructor() {
+class Stock{
+    constructor(name, value) {
         console.log("Creating stock.");
     }
     
     getValue(stockAbr){
-
         // request most recent price as held in database
     }
     

@@ -1,5 +1,4 @@
-
-class portfolio{
+class Portfolio{
 
     constructor(stockName, price, quantity){
         this.stockName =  stockName;
