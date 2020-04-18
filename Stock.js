@@ -5,18 +5,18 @@ class Stock{
         console.log("Creating stock.");
     }
     
-    getValue(stockAbr){
+    getValue(){
         return this.value;
         // request most recent price as held in database
     }
     
-    getName(stockAbr){
+    getName(){
         //get full name using the abbreviation 
         console.log("Retrieving" + stockAbr + "full name")
         return this.name;
     }
     
-    updateValue(stockAbr){
+    updateValue(){
         //change value to new value"
         console.log("Stock: " + stockAbr + "value updated")
     }
