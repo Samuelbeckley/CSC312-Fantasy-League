@@ -32,9 +32,9 @@ CREATE TABLE leagues (
 
 CREATE TABLE users ( 
 
- column1 league,
+ column1 team,
 
-  column2 team,
+  column2 league,
 
   column3 score,
   
@@ -44,21 +44,23 @@ CREATE TABLE users (
   
   column6 stock3,
   
-  column4 stock4,
+  column7 stock4,
   
-  column4 stock5,
+  column8 stock5,
   
-  column4 stock6,
+  column9 stock6,
   
-  column4 stock7,
+  column10 stock7,
 
-  column4 stock8,
+  column11 stock8,
   
-  column4 stock9,
+  column12 stock9,
   
-  column4 stock10 );
+  column13 stock10,
+  
+  column14 score );
 
-CREATE TABLE users ( 
+CREATE TABLE stocks ( 
 
  column1 stockName,
 
