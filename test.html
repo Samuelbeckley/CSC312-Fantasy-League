@@ -1,9 +1,16 @@
 <body>
     <h2>Test</h2>
     <script src="AlphaVantage.js"></script>
+    <script src="Client.js"></script>
+    <script src="Portfolio.js"></script>
+    <script src="Profile.js"></script>
     <script>
         let AV = new AlphaVantage();
         AV.getStock("Apple");
         AV.getStockList(["Microsoft", "Amazon", "Tesla"]);
+
+        let c = new Client();
+        c.buyStock("IBM", 5);
+        c.printProfile();
     </script>
 </body>
