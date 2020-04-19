@@ -7,6 +7,31 @@ class Profile{
         this.password = "Password!123";
         console.log("Profile: new profile");
     }
+    get name() {
+      return this.name;
+    }
+    get username() {
+      return this.username;
+    }
+    get email(){
+      return this.email;
+    }
+    get password(){
+      return this.password;
+    }
+
+    set name(x){
+      this.name = x;
+    }
+    set username(x){
+      this.username = x;
+    }
+    set email(x){
+      this.email = x;
+    }
+    set password(x){
+      this.password = x;
+    }
 
     print(){
         console.log("Name: " + this.name);
