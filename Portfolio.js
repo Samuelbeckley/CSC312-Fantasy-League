@@ -19,6 +19,8 @@ class Portfolio{
         console.log("Portfolio: selling " + quantity + " " + stock + " stocks");
     }
 
+    //check stock price function 
+    
 
 // getStockData(){
 //     return [this.stockName,this.price,this.quantity];
