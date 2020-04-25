@@ -19,3 +19,7 @@
         <button onclick = "enterStock()" id = "btn1">Enter</button>
     </body>
 </html>
+
+//For using buttons and text input, the easiest method seems to be to 
+//create the button/textbox in html and then program its functionality 
+//using javascript.
