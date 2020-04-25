@@ -7,34 +7,92 @@
    <script src="Portfolio.js"></script>
    <!-- <script src="Profile.js"></script> -->
 
-   <p>Check Stock Data: &nbsp;
-      <input id=inpSymbol placeholder='MSFT'>
-      <button onclick=showData();>Get Stock Data</button>
-   </p>
-   <p></p>
-   <div id="divContents">Data will appear here automtically in a few seconds. Open the developer console to see more
-      details.</div>
+   <style type=text/css> 
+   .red { 
+      float: left; 
+      background-color:red;
+      border: white;
+   } 
+   .gray { 
+      float: left; 
+      background-color:black; 
+   }
+   .buySell{
+      float: left;
+      padding : 1%;
+      color: white; 
+      background-color: black;
+      height: 10vw; 
+      width: 45vw; 
+      border: black; 
+      left: 50%
+   }
+   .inner {
+      padding : 1%;
+      color: white; 
+      background-color: black;
+      height: 10vw; 
+      width: 40vw; 
+      border: black; 
+      margin-left: auto;
+      margin-right: auto
+   }
+   div{ 
+      float: left;
+      padding : 1%;
+      color: white; 
+      background-color: black;
+      height: 25vw; 
+      width: 45vw; 
+      border: black; 
+      left: 50%
+   } 
+   </style> 
+   <!-- <div> -->
+      <div class=red>
+         <p>Check Stock Data: &nbsp;
+            <input id=inpSymbol placeholder='Enter Stock Symbol'>
+            <button onclick=showData();>Get Stock Data</button>
+         </p>
+         <p></p>
+         <div id="divContents" class=inner>
+            Data will appear here automatically in a few seconds. Open the developer console to see more
+            details.
+         </div>
+      </div>
+   <!-- </div> -->
+   
 
 
+   <div class=gray>
+      <p>Search for Stock: &nbsp;
+         <input id=inpGuess placeholder='Enter Keyword'>
+         <button onclick=findStock();>Find Closest Stocks</button>
+      </p>
+      <p></p>
+      <div id="divSearch" class=inner>
+         Search Data will appear here.
+      </div>
+   </div>
 
-   <p>Search for Stock: &nbsp;
-      <input id=inpGuess placeholder='MicroSoft'>
-      <button onclick=findStock();>Find Closest Stocks</button>
-   </p>
-   <p></p>
-   <div id="divSearch">Search Data will appear here.</div>
 
-   <p>Buy Stocks:
-      <input id="stock" placeholder="Enter Desired Stock">
-      <input id="numStocks" placeholder="Quantity">
-      <button onclick=buy() id="buy">Buy</button>
-   </p>
+   <div class=buySell>
+      <p>Buy Stocks:
+         <input id="stock" placeholder="Enter Desired Stock">
+         <input id="numStocks" placeholder="Quantity">
+         <button onclick=buy() id="buy">Buy</button>
+      </p>
+   </div>
 
-   <p>Sell Stocks:
-      <input id="stock" placeholder="Enter Desired Stock">
-      <input id="numStocks" placeholder="Number to Purchase">
-      <button onclick=sell() id="sell">Sell</button>
-   </p>
+
+   <div class=buySell>
+      <p>Sell Stocks:
+         <input id=stock placeholder="Enter Desired Stock">
+         <input id=numStocks placeholder="Number to Purchase">
+         <button onclick=sell() id="sell">Sell</button>
+      </p>
+   </div>
+
 
 
    <script>
@@ -49,7 +107,12 @@
       }
 
       function buy() {
-
+         //whatever we want to have called on input
+         var str = document.getElementById("stock").value;
+         var num = document.getElementById("numStocks").value;
+         //check if stock exists and if possible to purchase
+         //make purchase and update portfolio
+         alert(num + " stocks of " + str + " purchased.");
       }
 
       function sell() {
