@@ -1,0 +1,66 @@
+//This will be the main file, mash everything together
+
+<body>
+   <h2>Test</h2>
+   <script src="AlphaVantage.js"></script>
+   <script src="Client.js"></script>
+   <script src="Portfolio.js"></script>
+   <!-- <script src="Profile.js"></script> -->
+
+   <p>Check Stock Data: &nbsp;
+      <input id=inpSymbol placeholder='MSFT'>
+      <button onclick=showData();>Get Stock Data</button>
+   </p>
+   <p></p>
+   <div id="divContents">Data will appear here automtically in a few seconds. Open the developer console to see more
+      details.</div>
+
+
+
+   <p>Search for Stock: &nbsp;
+      <input id=inpGuess placeholder='MicroSoft'>
+      <button onclick=findStock();>Find Closest Stocks</button>
+   </p>
+   <p></p>
+   <div id="divSearch">Search Data will appear here.</div>
+
+   <p>Buy Stocks:
+      <input id="stock" placeholder="Enter Desired Stock">
+      <input id="numStocks" placeholder="Quantity">
+      <button onclick=buy() id="buy">Buy</button>
+   </p>
+
+   <p>Sell Stocks:
+      <input id="stock" placeholder="Enter Desired Stock">
+      <input id="numStocks" placeholder="Number to Purchase">
+      <button onclick=sell() id="sell">Sell</button>
+   </p>
+
+
+   <script>
+      function showData() {
+         let AV = new AlphaVantage();
+         AV.getStock(inpSymbol.value);
+      }
+
+      function findStock() {
+         let AV = new AlphaVantage();
+         AV.searchStock(inpGuess.value)
+      }
+
+      function buy() {
+
+      }
+
+      function sell() {
+
+      }
+      //let AV = new AlphaVantage();
+      //AV.getStock("AAPL");
+      //AV.getStockList(["MSFT", "amzn", "TSLA"]);
+
+      //   let c = new Client();
+      //   c.buyStock("IBM", 5);
+      //   c.printProfile();
+   </script>
+</body>
