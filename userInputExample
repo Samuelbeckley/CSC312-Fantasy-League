@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Input Example</title>
+        <script type = "text/javascript">
+        function enterStock(){
+            //whatever we want to have called on input
+            var str = document.getElementById("stock").value;
+            var num = document.getElementById("numStocks").value;
+            //check if stock exists and if possible to purchase
+            //make purchase and update portfolio
+            alert(num + " stocks of " + str + " purchased.")
+        }
+        </script>
+    </head>
+    <body>
+        <input id="stock" placeholder="Enter Desired Stock">
+        <input id="numStocks" placeholder="Number to Purchase">
+        <br><br>
+        <button onclick = "enterStock()" id = "btn1">Enter</button>
+    </body>
+</html>
