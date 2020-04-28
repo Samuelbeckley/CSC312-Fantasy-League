@@ -1,0 +1,61 @@
+<html>
+<title>index</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="stockHomepage">
+
+
+<!-- Top bar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Home</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Profile</a>
+  </div>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
+
+<!-- Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="https://g.foolcdn.com/image/?url=https%3A//g.foolcdn.com/editorial/images/565090/hot-stocks.jpg&w=2000&op=resize" alt="stocks" style="width:100%;min-height:350px;max-height:400px;">
+</div>
+
+
+<!-- divs -->
+<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+    <h2>Portfolio Management</h2>
+    <p>Buy, sell, and view your investments.</p><br>
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Buy</p>
+        </li>
+            <input id="stock" placeholder="Enter Desired Stock">
+            <input id="numStocks" placeholder="Quantity">
+            <button onclick=buy() id="buy">Buy</button>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme-l2">
+          <p class="w3-xlarge">Sell</p>
+        </li>
+        <!--content here-->
+      </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">Portfolio</p>
+        </li>
+        <!--content here-->
+      </ul>
+    </div>
+</div>
