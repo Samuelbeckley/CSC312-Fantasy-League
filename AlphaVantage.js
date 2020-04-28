@@ -1,3 +1,5 @@
+// Spencer
+
 class AlphaVantage {
    // class methods
    constructor() {

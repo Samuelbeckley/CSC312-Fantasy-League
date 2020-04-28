@@ -1,3 +1,4 @@
+// JOSH
 class Stock{
     constructor(name, value) {
         this.name = name;

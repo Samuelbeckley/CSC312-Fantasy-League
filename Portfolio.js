@@ -1,3 +1,4 @@
+// SAM AND BRYAN
 class Portfolio{
 
     // constructor(stockName, price, quantity, userCash){

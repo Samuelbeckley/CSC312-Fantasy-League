@@ -1,3 +1,5 @@
+-- JAKE
+
 CREATE DATABASE game
 
 CREATE TABLE leagues ( 
