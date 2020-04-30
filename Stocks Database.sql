@@ -1,5 +1,16 @@
+/*
+Group 1
+
+Database: 
+SQL database containing  the information for
+all of the leagues, users using the game, and the
+stocks currently owned by players in the game.
+*/
+
+--Initialize game
 CREATE DATABASE game
 
+--A list of leagues, containing scores for each team.
 CREATE TABLE leagues ( 
 
  column1 league,
@@ -30,6 +41,7 @@ CREATE TABLE leagues (
   
   column14 score12 );
 
+--Table containing users, their league, and the stocks they own.
 CREATE TABLE users ( 
 
  column1 team,
@@ -56,10 +68,10 @@ CREATE TABLE users (
   
   column12 stock9,
   
-  column13 stock10,
-  
-  column14 score );
+  column13 stock10 );
 
+--List of all of the stocks in the game, many of which may be used
+--by multiple players in different leagues.
 CREATE TABLE stocks ( 
 
  column1 stockName,
