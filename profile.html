@@ -1,32 +1,90 @@
+/*This document generates the profile and porfolio page for a user.
+
+By: Jalen and Sawyer
+
+Last Updated: 4/29/20
+
+*/
+
+//Style of Profile div object
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+//Generating Profile div
 <div class="card">
+  //adding profile image
   <img src="workfromhome.jpg" alt="John" style="width:100%">
+  //adding profile information
   <h1>JDoe92</h1>
   <p class="title">Email: jdoe@davidson.edu</p>
-  <p class="title">Leagues: Big Brain Buyers, Shorting your Mom, bUy ApPlE</p>
+  <p class="title">Leagues: Big Brain Buyers, Shorting your Mom, bUy ApPlE, FOREX TRAINERS</p>
   <p class="title">Wins: 4</p>
   <p class="title">Total Portfolio Value: $108,532</p>
-  <a href="#"><i class="fa fa-dribbble"></i></a>
-  <a href="#"><i class="fa fa-twitter"></i></a>
-  <a href="#"><i class="fa fa-linkedin"></i></a>
-  <a href="#"><i class="fa fa-facebook"></i></a>
+  //update button
   <p><button>Update Information</button></p>
 </div>
 
+//Generating Portfolio div
+<div class="wrapper">
+    <div class="right">
+
+        <div class="League">
+            <h3>Current League: FOREX TRAINERS</h3>
+            <div class="league-data">
+                <div class="data">
+                    <h4>Current Place:</h4>
+                    <p>Second</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio">
+            <h3>Portfilo</h3>
+            <div class="portfolio-data">
+                <div class="data">
+                    <h4>Top Performer</h4>
+                    <p>Apple Inc. (+8%)</p>
+                </div>
+                <div class="data">
+                    <h4>Remaining Portfolio</h4>
+                    <p>Uber Technologies (+6%)</p>
+                    <p>American Airline (-2%)</p>
+                    <p>Oil(-5%)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <h3>Tips</h3>
+            <div class="portfolio-data">
+                <div class="data">
+                    <h4>Quote:</h4>
+                    <p>'Every once and in a while,
+                        the market does something so stupid
+                        it takes your breath away' -Jim Cramer.</p>
+                </div>
+                <div class="data">
+                    <h4>Daily Tip</h4>
+                    <p>Pick companies, not stocks</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 <style>
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 300px;
     margin: auto;
     text-align: center;
+    float: left;
   }
-  
+
   .title {
     color: grey;
     font-size: 18px;
   }
-  
+
   button {
     border: none;
     outline: 0;
@@ -39,14 +97,17 @@
     width: 100%;
     font-size: 18px;
   }
-  
+
   a {
     text-decoration: none;
     font-size: 22px;
     color: black;
   }
-  
+
   button:hover, a:hover {
     opacity: 0.7;
+  }
+  .wrapper {
+    float: right;
   }
   </style>

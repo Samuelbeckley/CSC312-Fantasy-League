@@ -1,16 +1,37 @@
+<!-- Spencer -->
 <body>
-    <h2>Test</h2>
-    <script src="AlphaVantage.js"></script>
-    <script src="Client.js"></script>
-    <script src="Portfolio.js"></script>
-    <script src="Profile.js"></script>
-    <script>
-        let AV = new AlphaVantage();
-        AV.getStock("Apple");
-        AV.getStockList(["Microsoft", "Amazon", "Tesla"]);
+   <h2>Test</h2>
+   <script src="AlphaVantage.js"></script>
+   <script src="Client.js"></script>
+   <script src="Portfolio.js"></script>
+   <!-- <script src="Profile.js"></script> -->
 
-        let c = new Client();
-        c.buyStock("IBM", 5);
-        c.printProfile();
-    </script>
+   <p>Symbol: &nbsp;<input id=inpSymbol value='MSFT'></p>
+   <p><button onclick=showData();>Get Stock Data</button></p>
+   <div id="divContents">Data will appear here automtically in a few seconds. Open the developer console to see more
+      details.</div>
+
+
+   <p>Stock Name: &nbsp;<input id=inpGuess value='MicroSoft'></p>
+   <p><button onclick=findStock();>Find Closest Stocks</button></p>
+   <div id="divSearch">Search Data will appear here.</div>
+   <script>
+
+      function showData() {
+         let AV = new AlphaVantage();
+         AV.getStock(inpSymbol.value);
+      }
+
+      function findStock() {
+         let AV = new AlphaVantage();
+         AV.searchStock(inpGuess.value)
+      }
+      //let AV = new AlphaVantage();
+      //AV.getStock("AAPL");
+      //AV.getStockList(["MSFT", "amzn", "TSLA"]);
+
+      //   let c = new Client();
+      //   c.buyStock("IBM", 5);
+      //   c.printProfile();
+   </script>
 </body>
