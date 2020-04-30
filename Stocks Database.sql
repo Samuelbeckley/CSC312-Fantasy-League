@@ -1,11 +1,13 @@
 
 /*
-Group 1
+Group 1 (Jake Carver)
 
 Database: 
 SQL database containing  the information for
 all of the leagues, users using the game, and the
 stocks currently owned by players in the game.
+
+4/30/2020
 */
 
 --Initialize game
