@@ -1,27 +1,33 @@
-<!-- Spencer -->
+<!-- HEADER
+   This is a test file, which we used to develop and test our code, combining components and beginning to implement interactivty
+   Spencer -->
+
 <body>
    <h2>Test</h2>
+   <!-- Import the class files -->
    <script src="AlphaVantage.js"></script>
    <script src="Client.js"></script>
    <script src="Portfolio.js"></script>
    <!-- <script src="Profile.js"></script> -->
 
+   <!-- Button to get stock data of an entered stock symbol -->
    <p>Symbol: &nbsp;<input id=inpSymbol value='MSFT'></p>
    <p><button onclick=showData();>Get Stock Data</button></p>
    <div id="divContents">Data will appear here automtically in a few seconds. Open the developer console to see more
       details.</div>
 
-
+   <!-- Button to look up stocks based on a guess of stock name or company -->
    <p>Stock Name: &nbsp;<input id=inpGuess value='MicroSoft'></p>
    <p><button onclick=findStock();>Find Closest Stocks</button></p>
    <div id="divSearch">Search Data will appear here.</div>
    <script>
-
+      // retrieves stock data of input value, used by the Get Stock Data button
       function showData() {
          let AV = new AlphaVantage();
          AV.getStock(inpSymbol.value);
       }
 
+      // returns all stocks similar to input value, used by Find Closest Stocks button
       function findStock() {
          let AV = new AlphaVantage();
          AV.searchStock(inpGuess.value)

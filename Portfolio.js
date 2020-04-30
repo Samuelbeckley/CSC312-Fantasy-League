@@ -11,7 +11,6 @@ stock portfolios.
 */
 
 
-// SAM AND BRYAN
 class Portfolio{
 
     constructor(){

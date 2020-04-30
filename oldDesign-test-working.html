@@ -50,7 +50,7 @@
       left: 50%
    } 
    </style> 
-   <!-- <div> -->
+   <!-- Check stock data button, uses AlphaVantage to return latest stock data -->
       <div class=red>
          <p>Check Stock Data: &nbsp;
             <input id=inpSymbol placeholder='Enter Stock Symbol'>
@@ -65,7 +65,7 @@
    <!-- </div> -->
    
 
-
+<!-- Find stock button, uses AlphaVantage to return closest stocks to keyword -->
    <div class=gray>
       <p>Search for Stock: &nbsp;
          <input id=inpGuess placeholder='Enter Keyword'>
@@ -77,7 +77,7 @@
       </div>
    </div>
 
-
+<!-- Buy button, buys stock for client -->
    <div class=buySell>
       <p>Buy Stocks:
          <input id="stock" placeholder="Enter Desired Stock">
@@ -86,7 +86,7 @@
       </p>
    </div>
 
-
+<!-- Sell button, sells stocks for client -->
    <div class=buySell>
       <p>Sell Stocks:
          <input id=stock placeholder="Enter Desired Stock">
@@ -98,25 +98,27 @@
 
 
    <script>
+      //displays stock data for input stock
       function showData() {
          let AV = new AlphaVantage();
          AV.getStock(inpSymbol.value);
       }
 
+      //displays closest stocks to input guess
       function findStock() {
          let AV = new AlphaVantage();
          AV.searchStock(inpGuess.value)
       }
 
+      //buys stock for client
       function buy() {
-         //whatever we want to have called on input
          var str = document.getElementById("stock").value;
          var num = document.getElementById("numStocks").value;
          //check if stock exists and if possible to purchase
          //make purchase and update portfolio
          alert(num + " stocks of " + str + " purchased.");
       }
-
+      //sells stock for client
       function sell() {
 
       }
